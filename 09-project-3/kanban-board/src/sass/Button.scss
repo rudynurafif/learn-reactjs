@@ -1,0 +1,57 @@
+.add-button {
+  margin-top: 1rem;
+  width: 12rem;
+  height: 2rem;
+  padding: 0 0.5rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+}
+
+.form-box {
+  height: 6rem;
+  min-width: 10rem;
+  background: #ebecf1;
+  padding: 1rem 0.5rem;
+  margin-top: 1rem;
+  .text-area {
+    width: 90%;
+    height: 2rem;
+    resize: none;
+    padding: 0.5rem 1rem;
+    border: none;
+    margin-bottom: 0.3rem;
+    border-radius: 3px;
+    &:focus {
+      outline: none;
+    }
+  }
+  .add {
+    background: #63bd4f;
+    border: none;
+    padding: 0.5rem 0.5rem;
+    border-radius: 3px;
+    color: #fff;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+    &:hover {
+      background: #287c15;
+    }
+  }
+  .close {
+    border: none;
+    border-radius: 3px;
+    padding: 0.5rem 0.5rem;
+    color: white;
+    background-color: rgb(161, 37, 37);
+    cursor: pointer;
+    &:hover{
+      color: white;
+      background-color: rgb(241, 13, 13);
+    }
+  }
+}

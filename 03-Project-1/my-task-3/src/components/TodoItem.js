@@ -8,15 +8,15 @@ const TodoItem = ({ todo, del, open }) => {
   }
 
   return (
-    <div style={todoItem}>
-      <p>{todo.title}</p>
-      <div>
-        <Button text="Edit" variant="success" action={() => open(todo.id, todo.title)} />
-        <Button text="Delete" variant="warning"
-        action={() => delById(todo.id)}
-        />
+      <div style={todoItem}>
+        <p>{todo.title}</p>
+        <div>
+          <Button text="Edit" variant="success" action={() => open(todo.id, todo.title)} />
+          <Button text="Delete" variant="warning"
+          action={() => delById(todo._id)}
+          />
+        </div>
       </div>
-    </div>
   )
 }
 

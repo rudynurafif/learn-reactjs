@@ -11,6 +11,7 @@ export default function Board({ data, index }) {
       {provided => (
       <div
         ref={provided.innerRef}
+        {...provided.dragHandleProps}
         {...provided.draggableProps}
         className='board'
       >

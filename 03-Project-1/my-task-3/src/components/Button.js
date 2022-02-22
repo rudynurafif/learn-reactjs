@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import '../styles/Button.css'
 
-export default function Button( {variant, text, action} ) {
+export default function Button({ variant, text, action, load }) {
   return (
     <button
       className={`btn btn-${variant}`}
       onClick={action}
-    >
-      {text}
+      >
+      {load ? 'Loading..' : text}
     </button>
   )
 }

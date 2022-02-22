@@ -4,6 +4,7 @@
   margin: 0 0.2rem;
   border: none;
   color: #fff;
+  cursor: pointer;
 }
 
 .btn:focus {

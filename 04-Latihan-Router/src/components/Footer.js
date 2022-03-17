@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <div style={footer}>
-      <h1>React Router Concept</h1>
+      <h3>React Router Concept</h3>
     </div>
   )
 }

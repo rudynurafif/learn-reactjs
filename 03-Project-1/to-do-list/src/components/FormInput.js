@@ -13,8 +13,10 @@ class FormInput extends Component {
 
   submit = e => {
     e.preventDefault()
-    if (this.state !== '') {
+    if (this.state.text !== '') {
       this.props.add(this.state.text)
+    } else {
+      alert('New list cannot be empty!')
     }
     this.setState({
       text: ''

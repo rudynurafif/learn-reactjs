@@ -1,6 +1,7 @@
 import styled, {ThemeProvider} from 'styled-components'
 import logo from './logo.svg'
 
+// konsep global theme, supaya bisa diakses di komponen mana saja
 const theme = {
   primary: 'red',
   secondary: 'blue'
@@ -27,6 +28,7 @@ const Button = styled.button`
   margin: 0 1rem;
 `
 
+// extend style dari Button, karna hanya ingin warna button yang berubah, bisa pakai ini
 const TomatoButton = styled(Button)`
   background: tomato;
 `
@@ -61,7 +63,7 @@ function App() {
         <Button primary>primary</Button>
         <TomatoButton>tomato</TomatoButton>
         <Wrapper>biasa</Wrapper>
-        <Wrapper className='test'> with class name</Wrapper>
+        <Wrapper className='test'>with class name</Wrapper>
         <AnotherButton variant='primary'>primary</AnotherButton>
         <AnotherButton variant='success'>success</AnotherButton>
         <AnotherButton>default</AnotherButton>

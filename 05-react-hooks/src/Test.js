@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+// contoh class component
+
 export default class Test extends Component {
   state = {
     angka: 0

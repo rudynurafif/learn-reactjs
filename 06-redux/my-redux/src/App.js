@@ -5,7 +5,7 @@ import Todos from './components/Todos';
 import Form from './components/Form';
 import './App.css';
 
-function App() {
+const App = () => {
   return (
     <Provider store={store}>
       <div className="App">

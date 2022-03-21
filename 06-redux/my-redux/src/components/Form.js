@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { add } from '../store/actions/lists'
 
 export default function Form() {
+  
   const [ text, setText ] = useState("")
   const dispatch = useDispatch()
   const handleChange = e => {
@@ -13,10 +14,12 @@ export default function Form() {
     dispatch(add(text))
     setText("")
   }
+
   return (
     <form onSubmit={submit}>
-      <input type="text" value={text} onChange={handleChange} placeholder='enter new task' />
+      <input type="text" value={text} onChange={handleChange} placeholder='Enter new task..' style={{ marginRight: '.4rem' }} />
       <button>Add</button>
     </form>
   )
+
 }

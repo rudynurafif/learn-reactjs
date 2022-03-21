@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <div style={footer}>
+    <footer style={footer}>
       <h3>React Router Concept</h3>
-    </div>
+    </footer>
   )
 }
 
@@ -14,7 +14,7 @@ const footer = {
   justifyContent: 'center',
   color: '#fff',
   alignItems: 'center',
-  position: 'absolute',
+  position: 'fixed',
   bottom: '0',
   width: '100%'
 }

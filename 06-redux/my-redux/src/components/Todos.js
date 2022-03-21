@@ -9,13 +9,29 @@ export default function Todos() {
     dispatch(del(id))
   }
   return (
-    <ul>
+    <ul style={myUl}>
       { todos.map(item => 
-        <li key={ item.id }>
+        <li key={item.id} style={li}>
           { item.title }
-          <button onClick={() => delData(item.id)}>X</button>
+          <button onClick={() => delData(item.id)} style={button}>x</button>
         </li>
       ) }
     </ul>
   )
+}
+
+const myUl = {
+  listStyle: 'none',
+}
+
+const li = {
+  display: 'flex',
+  position: 'relative',
+  left: '-24px',
+  justifyContent: 'center',
+  marginBottom: '.8rem'
+}
+
+const button = {
+  marginLeft: '.3rem'
 }

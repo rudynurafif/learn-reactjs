@@ -1,33 +1,36 @@
-.App {
+// menggunakan teknik BEM
+// Dalam SASS ada teknik BEM, yaitu Block Element and Modifier. Supaya lebih rapi dan mudah dibaca. Ada juga fitur / konsep nesting
+
+.App { // Block
   text-align: center;
-  .card {
+  .card { // Block
     height: 10rem;
     width: 5rem;
     background-color: yellow;
-    &__image {
+    &__image { // Element
       color: red;
     }
-    &__heading {
+    &__heading { // Element
       color: blue;
     }
-    &__paragraph {
+    &__paragraph { // Element
       color: green;
-      &--normal {
+      &--normal { // Modifier
         font-weight: bold;
       }
-      &--italic {
+      &--italic { // Modifier
         font-style: italic;
       }
     }
   }
-  .btn {
+  .btn { // Block
     width: 5rem;
     height: 2rem;
     padding: 5px 10px;
-    &--primary {
+    &--primary { // Modifier
       background-color: blue;
     }
-    &--secondary {
+    &--secondary { // Modifier
       background-color: green;
     }
   }

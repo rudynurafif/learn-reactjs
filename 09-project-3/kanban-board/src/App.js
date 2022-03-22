@@ -51,6 +51,7 @@ const App = () => {
       updateDrag(newStore)
     }
   }
+  
   return (
     <DragDropContext onDragEnd={onDragEnd}>
       <Droppable droppableId='app' type='list' direction='horizontal'>

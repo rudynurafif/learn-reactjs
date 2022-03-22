@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './App.scss';
 
 function App() {
@@ -19,8 +19,8 @@ function App() {
           paragraph italic
         </div>
       </div>
-      <button className="btn btn--primary">primary</button>
-      <button className="btn btn--secondary">secondary</button>
+      <button className="btn btn--primary">Primary</button>
+      <button className="btn btn--secondary">Secondary</button>
     </div>
   );
 }

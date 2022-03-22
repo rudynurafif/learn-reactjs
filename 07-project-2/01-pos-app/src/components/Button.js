@@ -13,14 +13,15 @@ const MyButton = styled.button`
     outline: none;
   }
 `
+// extend ke button utama
 const PrimaryButton = styled(MyButton)`
-  background: ${props => props.theme.primary}
+  background: ${(props) => props.theme.primary};
 `
 const WarningButton = styled(MyButton)`
-background: ${props => props.theme.tertiary}
+  background: ${(props) => props.theme.tertiary};
 `
 
-export default function Button({primary, action, text}) {
+export default function Button({ primary, action, text }) {
   if (primary) {
     return <PrimaryButton onClick={action}>{text}</PrimaryButton>
   } else {

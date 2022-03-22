@@ -13,7 +13,7 @@ const Head = styled.div`
 export default function Header() {
   return (
       <Head>
-        <h1>Cashier App</h1>
+        <h1>Cashier App (Web Only)</h1>
       </Head>
   )
 }

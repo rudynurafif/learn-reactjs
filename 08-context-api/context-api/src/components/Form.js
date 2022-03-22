@@ -4,8 +4,8 @@ import { add } from '../actions/ListAction'
 
 export default function Form() {
   const [text, setText] = useState('')
-  const {dispatch} = useContext(DataContext)
-  const change = e => {
+  const { dispatch } = useContext(DataContext)
+  const change = (e) => {
     setText(e.target.value)
   }
   const submit = (e) => {
@@ -15,7 +15,12 @@ export default function Form() {
   }
   return (
     <form onSubmit={submit}>
-      <input type="text" value={text} placeholder="enter new list" onChange={change} />
+      <input
+        type='text'
+        value={text}
+        placeholder='Enter new list'
+        onChange={change}
+      />
       <button>Add</button>
     </form>
   )

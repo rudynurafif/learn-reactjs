@@ -4,17 +4,17 @@ import { del } from '../actions/ListAction'
 
 export default function Todos() {
   const { lists, dispatch } = useContext(DataContext)
-  const remove = id => {
+  const remove = (id) => {
     dispatch(del(id))
   }
   return (
     <ul>
-      {lists.map(item =>
+      {lists.map((item) => (
         <li key={item.id}>
           {item.title}
           <button onClick={() => remove(item.id)}>X</button>
-        </li>  
-      )}
+        </li>
+      ))}
     </ul>
   )
 }

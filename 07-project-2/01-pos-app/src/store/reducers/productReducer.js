@@ -2,7 +2,7 @@ import { products } from '../../utils/data'
 
 const initialState = {
   products: products,
-  carts: []
+  carts: [],
 }
 
 const productReducer = (state = initialState, action) => {
@@ -10,58 +10,64 @@ const productReducer = (state = initialState, action) => {
   switch (type) {
     default:
       return state
-    case "ADD_TO_CART":
-      const itemInCart = state.carts.find(item => item.id === payload)
-      const newItemCart = state.products.find(item => item.id === payload)
+    case 'ADD_TO_CART':
+      // cek apakah item sudah ada dalam cart atau belum
+      const itemInCart = state.carts.find((item) => item.id === payload)
+      // menambahkan item baru ke cart
+      const newItemCart = state.products.find((item) => item.id === payload)
       if (!itemInCart) {
         return {
           ...state,
-          carts: [...state.carts, newItemCart]
+          carts: [...state.carts, newItemCart],
         }
       } else {
         return state
       }
-    case "INCREMENT":
-      const originalPrice = state.products.find(item => item.id === payload).price
-      const incCarts = state.carts.map(item => {
+
+    case 'INCREMENT':
+      const originalPrice = state.products.find((item) => item.id === payload).price
+      const incCarts = state.carts.map((item) => {
         if (item.id === payload) {
           return {
             ...item,
-            price: item.price + originalPrice
+            price: item.price + originalPrice,
           }
         } else {
           return item
         }
       })
-    return {
-      ...state,
-      carts: incCarts
-    }
-    case "DECREMENT":
-    const oriPrice = state.products.find(item => item.id === payload).price
-    const decCarts = state.carts.map(item => {
-      if (item.id === payload) {
-        return {
-          ...item,
-          price: item.price - oriPrice
+      return {
+        ...state,
+        carts: incCarts,
+      }
+
+    case 'DECREMENT':
+      const oriPrice = state.products.find((item) => item.id === payload).price
+      const decCarts = state.carts.map((item) => {
+        if (item.id === payload) {
+          return {
+            ...item,
+            price: item.price - oriPrice,
+          }
+        } else {
+          return item
         }
-      } else {
-        return item
-      }
-    })
+      })
       return {
         ...state,
-        carts: decCarts
+        carts: decCarts,
       }
-    case "REMOVE":
+
+    case 'REMOVE':
       return {
         ...state,
-        carts: state.carts.filter(item => item.id !== payload)
+        carts: state.carts.filter((item) => item.id !== payload),
       }
-    case "RESET":
+
+    case 'RESET':
       return {
         ...state,
-        carts: []
+        carts: [],
       }
   }
 }

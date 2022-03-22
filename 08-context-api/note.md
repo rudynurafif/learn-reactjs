@@ -1,0 +1,1 @@
+Context API, salah satu alternatif state management. Bukan dari library luar, melainkan fitur dari React itu sendiri. Data flow sama dengan redux.

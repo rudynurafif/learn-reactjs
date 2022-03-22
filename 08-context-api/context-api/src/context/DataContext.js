@@ -6,8 +6,8 @@ export const DataContext = createContext()
 const initialState = [
   {
     id: 1,
-    title: 'The Title 1'
-  }
+    title: 'The Title 1',
+  },
 ]
 
 export const DataProvider = (props) => {

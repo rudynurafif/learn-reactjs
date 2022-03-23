@@ -9,22 +9,25 @@ export default function Button({ id, list }) {
   const [text, setText] = useState('')
   const openForm = () => setOpen(true)
   const closeForm = () => setOpen(false)
-  const handleChange = e => setText(e.target.value)
+  const handleChange = (e) => setText(e.target.value)
+
   const addCard = () => {
     if (text) {
-    cardAdd(id, text)
+      cardAdd(id, text)
     }
-  setText('')
+    setText('')
   }
+
   const addList = () => {
     if (text) {
-    listAdd(text)
+      listAdd(text)
     }
-  setText('')
+    setText('')
   }
+
   const showForm = () => {
-    const textButton = list ? "Add board" : "Add list"
-    const placeholder = list ? "Enter board title" : "Enter list title"
+    const textButton = list ? 'Add board' : 'Add list'
+    const placeholder = list ? 'Enter lists title' : 'Enter card title'
     return (
       <div className='form-box'>
         <Textarea
@@ -35,15 +38,18 @@ export default function Button({ id, list }) {
           value={text}
           onChange={handleChange}
         />
-        <button className='add' onMouseDown={list ? addList : addCard}>{textButton}</button>
+        <button className='add' onMouseDown={list ? addList : addCard}>
+          {textButton}
+        </button>
         <button className='close' onClick={closeForm}>
           Cancel
         </button>
       </div>
     )
   }
+
   const showButton = () => {
-    const textButton = list ? "Add another board" : "Add new list"
+    const textButton = list ? 'Add another lists' : 'Add new card'
     const opacityButton = list ? 1 : 0.5
     const colorButton = list ? 'white' : 'inherit'
     const backgroundButton = list ? 'rgba(0, 0, 0, 0.25)' : 'inherit'
@@ -51,15 +57,16 @@ export default function Button({ id, list }) {
       <div
         className='add-button'
         onClick={openForm}
-        style={{ 
+        style={{
           opacity: opacityButton,
           color: colorButton,
-          background: backgroundButton
-         }}
+          background: backgroundButton,
+        }}
       >
-      + {textButton}
+        + {textButton}
       </div>
     )
   }
+
   return open ? showForm() : showButton()
 }

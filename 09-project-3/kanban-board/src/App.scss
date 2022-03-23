@@ -1,4 +1,19 @@
 .container {
   display: flex;
   margin-left: 1rem;
+  // justify-content: center;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 900px) {
+  .container {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .container {
+    flex-direction: column;
+    align-items: center;
+  }
 }

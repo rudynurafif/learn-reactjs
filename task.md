@@ -6,3 +6,6 @@
 5. Perbaiki CSS untuk tampilan product card, karna masih terlalu sederhana
 
 6. Refactor Project 1 menggunakan Context API
+
+7. Refactor project 3 yg menggunakan hooks state biasa menjadi reducer
+8. Project 3, buat fitur / functiom delete board pada icon titik tiga

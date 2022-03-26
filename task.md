@@ -11,5 +11,6 @@
 8. Project 3, buat fitur / function delete board pada icon titik tiga.
 
 9. Refactor project 1 dgn context api, bagian fungsi editnya.
-10. Refactor fungsi deleteTask (Task.js) dengan menambahkan handle jika ada error menggunakan try catch. Juga di file form input bagian add task,
-    buat handle juga ketika ada error menggunakan try catch block. Tmabahkan warning jika ada warning. Mirip di login & register.
+10. Refactor fungsi deleteTask (Task.js) dengan menambahkan handle jika ada error menggunakan try catch. Juga di file form input bagian add task, buat handle juga ketika ada error menggunakan try catch block. Tmabahkan warning jika ada warning. Mirip di login & register.
+
+11. Project 1 dgn redux-saga. Buat fungsi logout, edit todo. Dan pada folder sagas dibagian task, buat handle feedback ketika error saat add atau delete todo gagal.
